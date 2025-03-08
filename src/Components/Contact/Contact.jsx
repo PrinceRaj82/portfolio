@@ -5,70 +5,89 @@ import call from "../../assets/call_icon.svg";
 import location from "../../assets/location_icon.svg";
 import { useState } from "react";
 
-
 export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-    const [result, setResult] = useState("");
-    const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
-  
-      formData.append("access_key", "d3ab8d7d-b082-478b-97f9-56da4cb86977");
-  
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        alert("Form Submitted Successfully")
-        setResult("Form Submitted Successfully");
-        event.target.reset();
-      } else {
-        console.log("Error", data);
-        setResult(data.message);
-      }
-    };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => alert("Form submitted successfully!"))
+      .catch((error) => alert("Error: " + error));
+  };
 
   return (
     <div className="contact" id="contact">
       <div className="Contact_title">
         <h1>Get in touch</h1>
-        <img src={theme_pattern} alt="" />
+        <img src={theme_pattern} alt="Theme Pattern" />
       </div>
+
       <div className="contact_section">
         <div className="contact_left">
           <h1>Let's talk</h1>
-          <p>
-            I'm Currently avalibal to take a new project,so feel free to contact{" "}
-          </p>
+          <p>I'm currently available to take on new projects, so feel free to contact me.</p>
           <div className="contact_details">
             <div className="contact_detail">
-                <img src={mail} alt="" />
-                <p>Rajkumar.myself@gmail.com</p>
+              <img src={mail} alt="Email Icon" />
+              <p>Rajkumar.myself@gmail.com</p>
             </div>
             <div className="contact_detail">
-                <img src={call} alt="" />
-                <p>+91 8228812919</p>
+              <img src={call} alt="Call Icon" />
+              <p>+91 8228812919</p>
             </div>
             <div className="contact_detail">
-                <img src={location} alt="" />
-                <p>Giridih,Jharkhand</p>
+              <img src={location} alt="Location Icon" />
+              <p>Giridih, Jharkhand</p>
             </div>
           </div>
         </div>
-        <from onSubmit={onSubmit} className="contact_right" netlify >
-            <label htmlFor="name">Your Name</label>
-            <input type="text" id="full_name" placeholder="Entar your name" name="name"/>
-            <label htmlFor="email">Your Email</label>
-            <input type="email" name="email" id="eamil" placeholder="Enatr you mail"/>
-            <label htmlFor="message">Write massage</label>
-            <textarea name="message" id="message" rows={8} placeholder="Your message"></textarea>
-            <button className="sumbitbtn" >Send</button>
-        </from>
+
+        <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="contact_right">
+          <label htmlFor="name">Your Name</label>
+          <input
+            onChange={handleChange}
+            required
+            type="text"
+            id="full_name"
+            placeholder="Enter your name"
+            name="name"
+            value={formData.name}
+          />
+
+          <label htmlFor="email">Your Email</label>
+          <input
+            onChange={handleChange}
+            required
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            value={formData.email}
+          />
+
+          <label htmlFor="message">Write Message</label>
+          <textarea
+            onChange={handleChange}
+            required
+            name="message"
+            id="message"
+            rows={8}
+            placeholder="Your message"
+            value={formData.message}
+          ></textarea>
+
+          <button className="submitbtn" type="submit">Send</button>
+        </form>
       </div>
     </div>
   );
