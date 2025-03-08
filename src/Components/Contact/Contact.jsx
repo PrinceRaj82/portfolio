@@ -60,7 +60,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <from onSubmit={onSubmit} className="contact_right" >
+        <from onSubmit={onSubmit} className="contact_right" netlify >
             <label htmlFor="name">Your Name</label>
             <input type="text" id="full_name" placeholder="Entar your name" name="name"/>
             <label htmlFor="email">Your Email</label>
