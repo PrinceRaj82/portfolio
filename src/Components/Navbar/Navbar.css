@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* border: 2px solid white; */
+    overflow-x: hidden;
 }
 .nav-menu{
     display: flex;
@@ -27,7 +29,7 @@
     display: none;
 }
 
-@media (max-width: 768px){
+@media (max-width:1200px){
     .navbar{
         justify-content: space-between;
         margin:20px 50px;

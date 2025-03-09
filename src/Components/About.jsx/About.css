@@ -5,6 +5,9 @@
     justify-content: center;
     gap:80px;
     margin:80px 170px;
+    max-width:100vw;
+    /* border: 2px solid white; */
+    overflow-x: hidden;
 }
 .about-title{
     position: relative;
@@ -68,6 +71,7 @@
     width:100%;
     justify-content: space-around;
     margin-bottom: 80px;
+    border:1px solid wheat;
 }
 .about_achivement{
     display: flex;
@@ -75,8 +79,7 @@
     align-items: center;
     gap:10px;
     transition: 0.5s;
-
-
+    
 }
 
 .about_achivement:hover{
@@ -123,10 +126,18 @@
     .About_skill p{
         font-size: 20px;
     }
+    .about_achivements{
+        justify-content: space-between;
+        gap: 20px;
+    }
     .about_achivement h1{
-        font-size: 50px;
+        font-size:5vmin;
     }
     .about_achivement p{
-        font-size: 18px;
+        font-size:3vmin;
     }
+}
+
+@media(max-width:400px){
+
 }

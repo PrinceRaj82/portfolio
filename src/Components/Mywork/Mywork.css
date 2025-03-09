@@ -4,24 +4,25 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
+    /* border: 1px solid white; */
+    width:100%;
+    max-width:100vw;
+    overflow-x: hidden;
 }
 .mywork_title{
     position: relative;
 }
 .mywork_title h1{
-    padding: 0 30px;
-    font-size: 60px;
+    padding:0px 30px;
+    font-size: 80px;
     font-weight: 600;
-
-
+    text-align: center;
 }
 .mywork_title img{
     position: absolute;
-    max-width:200px;
-    bottom:0;
+    bottom: 0;
     right: 0;
-    z-index:-1;
+    z-index: -1;
 }
 
 .mywork_container{
@@ -33,7 +34,6 @@
 .mywork_container img{
     box-sizing: border-box;
     max-width: 419px;
-    height: 280px;
     cursor: pointer;
     transition:0.3s;
 }
@@ -59,4 +59,62 @@
 .mywork_showmore:hover{
     gap: 30px;
     transition:0.6s;
+}
+
+
+@media (max-width: 1200px){
+   .mywork{
+    gap:50px;
+    /* margin: 50px 70px; */
+    align-items: center;
+   }
+   .mywork_title h1{
+    padding: 0;
+    font-size: 50px;
+   }
+    .mywork_container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .mywork_container img{
+        max-width:300px;
+        gap:10px;
+    }
+
+}
+
+@media (max-width:743px){
+    .mywork_title h1{
+        padding: 0;
+        font-size:30px;
+        border: 2px solid white;
+       }
+}
+
+@media (max-width:700px){
+    .mywork_container{
+        grid-template-columns: 1fr;
+    }
+    .mywork_title h1{
+        padding: 0;
+        font-size:1.5rem;
+       }
+       .mywork_container img{
+        max-width:300px;
+    }
+
+    .mywork_showmore{
+        width:100%;
+        max-width:150px;
+        padding:10px 20px;
+        font-size:3vmin;
+    }
+    .mywork_showmore img{
+        width:2vmin;
+    }   
+}
+
+@media (max-width:700px){
+    .mywork_showmore{
+        display: none;
+    }
 }

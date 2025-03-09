@@ -26,6 +26,7 @@ export default function Contact() {
   };
 
   return (
+    
     <div className="contact" id="contact">
       <div className="Contact_title">
         <h1>Get in touch</h1>

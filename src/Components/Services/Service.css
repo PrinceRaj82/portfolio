@@ -5,6 +5,8 @@
     flex-direction: column;
     gap: 80px;
     margin: 80px 170px;
+    /* border: 2px solid white; */
+    overflow-x: hidden;
 }
 .services_title{
     position: relative;
@@ -64,4 +66,44 @@
     gap:20px;
     align-items: center;
     margin-top: 20px;
+}
+
+@media (max-width:1200px){
+    .services{
+        align-items: center;
+        gap:4.5rem;
+        margin: 20px 50px;
+    }
+    .services_title h1{
+        padding: 0;
+        font-size:10vmin;
+        border: 2px solid white;
+        /* min-width:00px; */
+    }
+    .services_title img{
+        width:50%;
+        margin-right: -20px;
+    }
+    .service_format{
+        gap: 10px;
+        padding: 40px;
+    }
+    .service_format h2{
+        font-size: 24px;
+    }
+    .service_format p{
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 250px;
+    }
+    .services_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+@media (max-width:700px){
+    .services_container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }  
 }
