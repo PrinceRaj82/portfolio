@@ -40,11 +40,11 @@ export default function Contact() {
           <div className="contact_details">
             <div className="contact_detail">
               <img src={mail} alt="Email Icon" />
-              <p>Rajkumar.myself@gmail.com</p>
+              <p>Rajkumar.webdev@gmail.com</p>
             </div>
             <div className="contact_detail">
               <img src={call} alt="Call Icon" />
-              <p>+91 8228812919</p>
+              <p>+91 XXXXXXXXXX</p>
             </div>
             <div className="contact_detail">
               <img src={location} alt="Location Icon" />
