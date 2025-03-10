@@ -111,7 +111,7 @@
 
 form{
     width:50%;
-    border:1px solid beige;
+/*     border:1px solid beige; */
 }
 
 @media (max-width:1200px){
