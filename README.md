@@ -1,8 +1,63 @@
-# React + Vite
+# Personal-Portfolio
+> This is personal portfolio website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio](https://raw.github.com/PrinceRaj82/portfolio/main/src/assets/port.png)
 
-Currently, two official plugins are available:
+## Built With
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- CSS
+- VS code
+
+## Live Demo
+
+- [Live Demo](https://rajkumarprince.netlify.app/)
+
+
+# Getting Started
+## Prerequisites:
+
+
+- Create an account on github
+
+- Install gitbash or use git on the command line.
+
+- Use an IDE of your preference such as VScode.
+
+## Steps to follow:
+
+- Choose a folder in your local machine where you want this repository to be copied
+
+- Clone this [repository](https://github.com/PrinceRaj82/portfoli) to your local machine 
+- ```
+  git clone git@github.com:PrinceRaj82/portfolio.git
+  ```
+
+- Navigate to `cd portfolio`  directory.
+
+- To install all the app dependencies on the command line run
+- ```
+  npm install
+  ``` 
+- To run app in the development mode run 
+- ```
+  npm run dev
+  ```
+
+
+## Author
+
+👦: **Rajkumar Prince**
+
+- [GitHub](https://github.com/PrinceRaj82)
+- [LinkedIn](https://www.linkedin.com/in/rajkumarprince/)
+
+## 🤝 Contributing
+- Contributions, issues, and feature requests are welcome!
+- Feel free to check the [issues page](https://github.com/PrinceRaj82/portfolio2nd/issues).
+
+# Show your support
+Give a ⭐ if you like this project!
+
+# Acknowledgments
+Thanks to [EGATOR](https://www.youtube.com/watch?v=G-Cr00UYokU&list=WL&index=55&t=1845s) tutorial!
