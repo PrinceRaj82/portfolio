@@ -11,7 +11,8 @@
 .hero img{
     margin-top: 40px;
     border-radius:50%;
-    width:400px;
+    width:200px;
+    height:200px
 }
 .hero h1{
     text-align: center;
