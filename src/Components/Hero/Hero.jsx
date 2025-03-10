@@ -15,7 +15,7 @@ export default function Hero(){
 
     return (
         <div className="hero" id="hero">
-            <img src={profile_img} alt="" class="profile_img" />
+            <img src={profile_img} alt="" className="profile_img" />
             <h1><span>I am Rajkumar,</span> fullstack developer from Giridih</h1>
             <p>I am a self Lern developer i have been Build Many real world project to master this skill.</p>
             <div className="hero-action">
